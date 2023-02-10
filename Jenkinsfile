@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('----Clean----') { 
             steps {
+                sh "rm -rf pipeline-app"
                 sh "mvn clean"
             }
         }
@@ -13,7 +14,7 @@ pipeline {
         }
         stage('----Deploy----') { 
             steps {
-                sh "mvn deploy"
+                sh "mvn package"
             }
         }
     }
