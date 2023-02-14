@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh "mvn test -f pipeline-app"
                 echo "This is triggered form test stage"
-                echo "===================================="
+                echo "=========================================="
             }
         }
         stage('----Deploy----') { 
